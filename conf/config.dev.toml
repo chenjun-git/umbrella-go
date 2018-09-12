@@ -1,0 +1,16 @@
+listen = ":7109"
+
+[mysql]
+dsn = "root:@tcp(127.0.0.1:3306)/enterprise_info?charset=utf8mb4,utf8&parseTime=True&loc=Local"
+maxIdle = 1
+maxOpen = 2
+
+[redis]
+addr = "127.0.0.1:6379"
+password = ""
+db = 1
+poolSize = 5
+timeout = "1s"
+
+[http]
+listen = ":8888"

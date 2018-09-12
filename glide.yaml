@@ -1,0 +1,6 @@
+package: .
+import: 
+- package: github.com/go-sql-driver/mysql
+- package: github.com/gogo/protobuf
+- package: github.com/go-chi/chi
+- package: github.com/BurntSushi/toml

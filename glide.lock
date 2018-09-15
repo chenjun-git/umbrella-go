@@ -1,10 +1,72 @@
-hash: 8b4e42ad647aae3d2c2791b7feca91d2523303b7b2e31d37c2777a0f8bbb01b1
-updated: 2018-09-12T20:27:26.64605602+08:00
+hash: 449ad8bee16edbd46fe4afb39ac4d47d1189be4662ab63cf3110d3c737ef18ce
+updated: 2018-09-15T14:20:48.385391621+08:00
 imports:
+- name: git.meiqia.com/triones/compass
+  version: 2132e2c87af73fb015bf7383e587982ee1a00f36
+  subpackages:
+  - redis
+- name: github.com/BurntSushi/toml
+  version: 3012a1dbe2e4bd1391d42b32f0577cb7bbc7f005
+- name: github.com/fzzy/radix
+  version: 031cc11e9800a2626ee2ae629655a922b630a07d
+  subpackages:
+  - extra/cluster
+  - extra/pool
+  - extra/pubsub
+  - extra/sentinel
+  - redis
+  - redis/resp
 - name: github.com/go-chi/chi
   version: 235fa5d9ba51003bd4c40a69bb9e7c4d82a5ef39
+- name: github.com/go-chi/render
+  version: 3215478343fbc559bd3fc08f7031bb134d6bdad5
 - name: github.com/go-sql-driver/mysql
   version: 99ff426eb706cffe92ff3d058e168b278cabf7c7
-- name: github.com/gogo/protobuf
-  version: 342cbe0a04158f6dcb03ca0079991a51a4248c02
-testImports: []
+- name: github.com/golang/protobuf
+  version: a47340a8e42c4ceb44c00c2a05199e24b24fcaef
+  subpackages:
+  - proto
+- name: github.com/json-iterator/go
+  version: 2433035e513208b0f7bd5b50d0aecd889b2c1ff8
+- name: github.com/modern-go/concurrent
+  version: bacd9c7ef1dd9b15be4a9909b8ac7a4e313eec94
+- name: github.com/modern-go/reflect2
+  version: 94122c33edd36123c84d5368cfb2b69df93a0ec8
+- name: github.com/stretchr/testify
+  version: f35b8ab0b5a2cef36673838d662e249dd9c94686
+  subpackages:
+  - assert
+- name: golang.org/x/net
+  version: d866cfc389cec985d6fda2859936a575a55a3ab6
+  subpackages:
+  - context
+- name: google.golang.org/grpc
+  version: 6b51017f791ae1cfbec89c52efdf444b13b550ef
+  subpackages:
+  - metadata
+testImports:
+- name: github.com/alicebob/gopher-json
+  version: 5a6b3ba71ee69b77cf64febf8b5a7526ca5eaef0
+- name: github.com/alicebob/miniredis
+  version: 3657542c8629876a1fa83e0b30a0246a67ffa652
+  subpackages:
+  - server
+- name: github.com/davecgh/go-spew
+  version: d8f796af33cc11cb798c1aaeb27a4ebc5099927d
+  subpackages:
+  - spew
+- name: github.com/gomodule/redigo
+  version: 2cd21d9966bf7ff9ae091419744f0b3fb0fecace
+  subpackages:
+  - internal
+  - redis
+- name: github.com/pmezard/go-difflib
+  version: 792786c7400a136282c1664665ae0a8db921c6c2
+  subpackages:
+  - difflib
+- name: github.com/yuin/gopher-lua
+  version: ed65620d4bd7093055e0e305bf0fdadcc0026acb
+  subpackages:
+  - ast
+  - parse
+  - pm

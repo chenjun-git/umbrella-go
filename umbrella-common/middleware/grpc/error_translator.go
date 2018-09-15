@@ -5,7 +5,7 @@ import (
 	"google.golang.org/grpc"
 
 	"umbrella-go/umbrella-common/lang"
-	proto "umbrella-go/proto"
+	proto "umbrella-go/umbrella-common/proto"
 )
 
 type errorGetter interface {

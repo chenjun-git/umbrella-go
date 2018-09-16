@@ -1,4 +1,10 @@
-package client
+package redis
+
+import (
+	"time"
+
+	"github.com/fzzy/radix/redis"
+)
 
 type Option func(*Client)
 

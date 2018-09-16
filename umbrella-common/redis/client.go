@@ -1,6 +1,10 @@
-package client
+package redis
 
 import (
+	"context"
+	"fmt"
+	"strings"
+
 	"github.com/fzzy/radix/redis"
 )
 

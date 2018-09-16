@@ -1,4 +1,10 @@
-package client
+package redis
+
+import (
+	"context"
+
+	"git.meiqia.com/triones/compass/redis"
+)
 
 
 type Pipeliner func(ctx context.Context, reqs []*Request) []*redis.Reply

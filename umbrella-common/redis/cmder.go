@@ -1,5 +1,10 @@
 package redis
 
+import (
+	"context"
+
+	"git.meiqia.com/triones/compass/redis"
+)
 
 type Cmder func(ctx context.Context, cmd string, args []interface{}) *redis.Reply
 

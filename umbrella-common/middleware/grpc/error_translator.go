@@ -1,4 +1,4 @@
-package grpc
+package grpcmiddleware
 
 import (
 	"golang.org/x/net/context"

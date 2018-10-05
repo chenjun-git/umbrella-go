@@ -1,6 +1,7 @@
 package sql
 
 import (
+	"context"
 	"database/sql"
 )
 

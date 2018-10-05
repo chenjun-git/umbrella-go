@@ -12,5 +12,9 @@ db = 1
 poolSize = 5
 timeout = "1s"
 
+[monitor]
+namespace = "umbrella"
+subsystem = "center"
+
 [http]
 listen = ":8888"

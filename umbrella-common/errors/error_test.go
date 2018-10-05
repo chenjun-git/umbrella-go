@@ -12,9 +12,9 @@ func TestFromProtoError(t *testing.T) {
 	assert := assert.New(t)
 
 	protoErr := &commonProto.Error{
-		Code: int32(1),
+		Code:        int32(1),
 		Description: "test description",
-		Message: "test message",
+		Message:     "test message",
 	}
 
 	umbrellaErr := FromProtoError(protoErr)
@@ -28,9 +28,9 @@ func TestToProtoError(t *testing.T) {
 	assert := assert.New(t)
 
 	umbrellaErr := &UmbrellaError{
-		Code: int(1),
+		Code:        int(1),
 		Description: "test description",
-		Message: "test message",
+		Message:     "test message",
 	}
 
 	protoErr := ToProtoError(umbrellaErr)

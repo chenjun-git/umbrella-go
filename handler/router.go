@@ -6,7 +6,7 @@ import (
 	"umbrella-go/handler/v1_0"
 )
 
-func BackendRouter() chi.Router {
+func RegisterBackendRouter() *chi.Mux {
 	router := chi.NewRouter()
 	registerRouter(router)
 	return router

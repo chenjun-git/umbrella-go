@@ -7,3 +7,6 @@ import:
 - package: github.com/fzzy/radix/redis
 - package: github.com/json-iterator/go
 - package: github.com/stretchr/testify/assert
+- package: golang.org/x/net
+- package: google.golang.org/grpc
+- package: github.com/prometheus/client_golang

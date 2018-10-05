@@ -7,7 +7,7 @@ import (
 
 	"umbrella-go/umbrella-common/errors"
 	"umbrella-go/umbrella-common/lang"
-	)
+)
 
 type RenderFunc func(w http.ResponseWriter, r *http.Request, v interface{})
 type ErrorMsgGetter func(code int, languages []string) string
@@ -32,4 +32,3 @@ func MakeJSON(errorMsgGetter ErrorMsgGetter) RenderFunc {
 		chiRender.JSON(w, r, v)
 	}
 }
-

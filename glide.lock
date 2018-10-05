@@ -1,10 +1,14 @@
-hash: 449ad8bee16edbd46fe4afb39ac4d47d1189be4662ab63cf3110d3c737ef18ce
-updated: 2018-09-15T14:20:48.385391621+08:00
+hash: e133e5bbb16157387d5a28d737ed27710af694e551d817c4d2cce186c452628a
+updated: 2018-09-20T20:24:14.304119427+08:00
 imports:
 - name: git.meiqia.com/triones/compass
   version: 2132e2c87af73fb015bf7383e587982ee1a00f36
   subpackages:
   - redis
+- name: github.com/beorn7/perks
+  version: 3a771d992973f24aa725d07868b467d1ddfceafb
+  subpackages:
+  - quantile
 - name: github.com/BurntSushi/toml
   version: 3012a1dbe2e4bd1391d42b32f0577cb7bbc7f005
 - name: github.com/fzzy/radix
@@ -22,16 +26,48 @@ imports:
   version: 3215478343fbc559bd3fc08f7031bb134d6bdad5
 - name: github.com/go-sql-driver/mysql
   version: 99ff426eb706cffe92ff3d058e168b278cabf7c7
+- name: github.com/gogo/protobuf
+  version: 342cbe0a04158f6dcb03ca0079991a51a4248c02
+  subpackages:
+  - proto
 - name: github.com/golang/protobuf
   version: a47340a8e42c4ceb44c00c2a05199e24b24fcaef
   subpackages:
   - proto
+  - ptypes
+  - ptypes/any
+  - ptypes/duration
+  - ptypes/timestamp
 - name: github.com/json-iterator/go
   version: 2433035e513208b0f7bd5b50d0aecd889b2c1ff8
+- name: github.com/matttproud/golang_protobuf_extensions
+  version: c12348ce28de40eed0136aa2b644d0ee0650e56c
+  subpackages:
+  - pbutil
 - name: github.com/modern-go/concurrent
   version: bacd9c7ef1dd9b15be4a9909b8ac7a4e313eec94
 - name: github.com/modern-go/reflect2
   version: 94122c33edd36123c84d5368cfb2b69df93a0ec8
+- name: github.com/prometheus/client_golang
+  version: 73edb9af667d9467d99b2001722770062a0086c3
+  subpackages:
+  - prometheus
+  - prometheus/internal
+  - prometheus/promhttp
+- name: github.com/prometheus/client_model
+  version: 5c3871d89910bfb32f5fcab2aa4b9ec68e65a99f
+  subpackages:
+  - go
+- name: github.com/prometheus/common
+  version: c7de2306084e37d54b8be01f3541a8464345e9a5
+  subpackages:
+  - expfmt
+  - internal/bitbucket.org/ww/goautoneg
+  - model
+- name: github.com/prometheus/procfs
+  version: a6e9df898b1336106c743392c48ee0b71f5c4efa
+  subpackages:
+  - xfs
 - name: github.com/stretchr/testify
   version: f35b8ab0b5a2cef36673838d662e249dd9c94686
   subpackages:
@@ -40,10 +76,56 @@ imports:
   version: d866cfc389cec985d6fda2859936a575a55a3ab6
   subpackages:
   - context
-- name: google.golang.org/grpc
-  version: 6b51017f791ae1cfbec89c52efdf444b13b550ef
+  - http2
+  - http2/hpack
+  - idna
+  - internal/timeseries
+  - lex/httplex
+  - trace
+- name: golang.org/x/sys
+  version: d0be0721c37eeb5299f245a996a483160fc36940
   subpackages:
+  - unix
+- name: golang.org/x/text
+  version: 905a57155faa8230500121607930ebb9dd8e139c
+  repo: https://github.com/golang/text.git
+  subpackages:
+  - secure/bidirule
+  - transform
+  - unicode/bidi
+  - unicode/norm
+- name: google.golang.org/genproto
+  version: 4b56f30a1fd96a133a036b62cdd2a249883dd89b
+  subpackages:
+  - googleapis/rpc/status
+- name: google.golang.org/grpc
+  version: 8dea3dc473e90c8179e519d91302d0597c0ca1d1
+  subpackages:
+  - balancer
+  - balancer/base
+  - balancer/roundrobin
+  - codes
+  - connectivity
+  - credentials
+  - encoding
+  - encoding/proto
+  - grpclog
+  - internal
+  - internal/backoff
+  - internal/channelz
+  - internal/envconfig
+  - internal/grpcrand
+  - internal/transport
+  - keepalive
   - metadata
+  - naming
+  - peer
+  - resolver
+  - resolver/dns
+  - resolver/passthrough
+  - stats
+  - status
+  - tap
 testImports:
 - name: github.com/alicebob/gopher-json
   version: 5a6b3ba71ee69b77cf64febf8b5a7526ca5eaef0

@@ -17,7 +17,7 @@ var MonitorHandlers = make(map[string]http.Handler)
 
 func RegisterHandlers(r *chi.Mux) {
 	if len(MonitorHandlers) == 0 {
-		log.Fatal("cannot start when have no handlers")
+		//log.Fatal("cannot start when have no handlers")
 	}
 
 	for k, v := range MonitorHandlers {
@@ -34,7 +34,8 @@ func InitAndListen(listenAddr string) {
 	RegisterHandlers(r)
 
 	go func() {
-		log.Fatal(http.ListenAndServe(listenAddr, r))
+		//log.Fatal()
+		http.ListenAndServe(listenAddr, r)
 	}()
 }
 

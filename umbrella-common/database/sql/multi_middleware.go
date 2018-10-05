@@ -3,6 +3,7 @@ package sql
 import (
 	"context"
 	"database/sql"
+	"io"
 )
 
 type MultiDBMiddleware []DBMiddleware

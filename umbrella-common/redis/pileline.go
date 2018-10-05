@@ -6,7 +6,6 @@ import (
 	"git.meiqia.com/triones/compass/redis"
 )
 
-
 type Pipeliner func(ctx context.Context, reqs []*Request) []*redis.Reply
 
 type PipelinerWrapper func(next Pipeliner, ctx context.Context, reqs []*Request) []*redis.Reply

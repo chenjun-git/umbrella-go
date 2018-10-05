@@ -1,5 +1,10 @@
 package sql
 
+import (
+	"context"
+	"database/sql"
+)
+
 type Conn struct {
 	*sql.Conn
 	context    MiddlewareContext

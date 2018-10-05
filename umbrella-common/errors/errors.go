@@ -23,9 +23,9 @@ func NewError(code int, description string) Error {
 }
 
 type UmbrellaError struct {
-	Code        int              `json:"code"`
-	Message     string             `json:"message"`               // 用于显示前端错误提示
-	Description string             `json:"description,omitempty"` // 用于内部显示错误信息
+	Code        int    `json:"code"`
+	Message     string `json:"message"`               // 用于显示前端错误提示
+	Description string `json:"description,omitempty"` // 用于内部显示错误信息
 }
 
 func (ue *UmbrellaError) GetCode() int {

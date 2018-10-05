@@ -1,5 +1,11 @@
 package sql
 
+import (
+	"context"
+	"database/sql"
+	"io"
+)
+
 type MiddlewareContext context.Context
 
 type DBMiddleware interface {

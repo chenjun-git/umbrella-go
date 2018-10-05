@@ -1,6 +1,8 @@
 package sql
 
 import (
+	"context"
+	"database/sql"
 	"io"
 )
 
@@ -162,7 +164,6 @@ func (f StmtContextFunc) Wrapped(w DBMiddleware) StmtContextFunc {
 		return w.StmtContext(mctx, ctx, stmt, f)
 	})
 }
-
 
 type ScanFunc func(mctx MiddlewareContext, dest []interface{}) error
 

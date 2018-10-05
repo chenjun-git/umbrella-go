@@ -1,6 +1,7 @@
 package sql
 
 import (
+	"context"
 	"database/sql"
 )
 
@@ -41,6 +42,25 @@ func (s *Stmt) Close() error {
 
 func (s *Stmt) Exec(args ...interface{}) (sql.Result, error) {
 	return s.ExecContext(context.Background(), args...)
+}
+
+func fromStmtExecContext(ec func(ctx context.Context, args ...interface{}) (sql.Result, error)) ExecContextFunc {
+	return func(mctx MiddlewareContext, ctx context.Context, query string, args []interface{}) (sql.Result, error) {
+		return ec(ctx, args...)
+	}
+}
+
+func fromStmtQueryContext(qc func(context.Context, ...interface{}) (*sql.Rows, error)) QueryContextFunc {
+	return func(mctx MiddlewareContext, ctx context.Context, query string, args []interface{}) (*sql.Rows, MiddlewareContext, error) {
+		rows, err := qc(ctx, args...)
+		return rows, mctx, err
+	}
+}
+
+func fromStmtQueryRowContext(qrc func(ctx context.Context, args ...interface{}) *sql.Row) QueryRowContextFunc {
+	return func(mctx MiddlewareContext, ctx context.Context, query string, args []interface{}) (*sql.Row, MiddlewareContext) {
+		return qrc(ctx, args...), mctx
+	}
 }
 
 func (s *Stmt) ExecContext(ctx context.Context, args ...interface{}) (sql.Result, error) {

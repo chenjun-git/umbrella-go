@@ -1,14 +1,25 @@
 package common
 
 import (
-	"fmt"
-
+	"time"
+	
 	"github.com/BurntSushi/toml"
 )
 
 // Configs 全局配置信息
 type Configs struct {
-	Listen                 string
+	Listen  string
+	Monitor *monitorConfig
+	HTTP    *httpConfig
+}
+
+type monitorConfig struct {
+	Namespace string
+	Subsystem string
+}
+
+type httpConfig struct {
+	Listen string
 }
 
 // Config 全局配置信息
@@ -46,4 +57,3 @@ func (d *Duration) UnmarshalText(text []byte) (err error) {
 func (d *Duration) D() time.Duration {
 	return d.Duration
 }
-

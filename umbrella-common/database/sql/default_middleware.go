@@ -12,7 +12,6 @@ var (
 
 type DefaultDBMiddleware struct{}
 
-
 func (dm *DefaultDBMiddleware) ExecContext(mctx MiddlewareContext, ctx context.Context, next ExecContextFunc, query string, args []interface{}) (sql.Result, error) {
 	return next(mctx, ctx, query, args)
 }
